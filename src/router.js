@@ -19,7 +19,7 @@ export default new Router({
       component: Edit,
     },
     {
-      path: '/company',
+      path: '/company/:id',
       name: 'CompanyList',
       component: View,
     },
