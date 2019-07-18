@@ -10,7 +10,7 @@
         </div>
       </div>
     </nav>
-    <router-view class="has-background-secondary" />
+    <router-view :key="$route.fullPath" class="has-background-secondary" />
     <footer class="footer ">
       <div class="content has-text-centered">
         <p>
@@ -28,5 +28,9 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   @import "~bulma/bulma";
+}
+
+.pt-2 {
+  padding-top: 2rem;
 }
 </style>
