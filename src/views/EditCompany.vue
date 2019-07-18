@@ -22,10 +22,14 @@ export default {
       const difference = Object.keys(payload.old).filter(k => (payload.new[k] && payload.old[k]
        !== payload.new[k]));
       let out = '';
+
       difference.forEach((key) => {
         out += `The field '${key}' has changed from ${payload.old[key]} to ${payload.new[key]}`;
         out += '\n';
       });
+      if(!out) {
+          out = 'No changes to form';
+      }
       alert(out);
     },
   },
